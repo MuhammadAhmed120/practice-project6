@@ -21,7 +21,7 @@
                     </ul>
                 </div>
                 <div>
-                    <i class="fa fa-light fa-cart-shopping"><sub>0</sub></i>
+                    <a href="order.html"><i class="fa fa-light fa-cart-shopping"><sub class="cartNum"></sub></i></a>
                 </div>
             </div>
         </div>
@@ -76,5 +76,35 @@
         This website is made by Restaurant.
     </footer>
 
+    <script>
+        var cartNum = document.querySelector(".cartNum");
+        var cart = 0;
+        var totalAmount = 0;
+        var cartCard;
+
+        function addToCart(food){
+            cart++
+            localStorage.setItem('cartNum', cart.toString());
+            cartNum.innerHTML = cart;
+
+            var chooseCard = food.parentNode.parentNode.parentNode 
+            cartCard = chooseCard;
+            console.log(cartCard)
+            var total = food.parentNode.parentNode.parentNode.childNodes[3].childNodes[5].childNodes[1].innerHTML;
+            var totalCash = parseFloat(total.slice(3));
+            totalAmount += totalCash;
+            console.log(totalAmount)
+        }
+
+        window.addEventListener('load', function(){
+            cart = localStorage.getItem('cartNum');
+            if(cart){
+                cartNum.innerHTML = parseInt(cart);
+            }
+            else{
+                cartNum.innerHTML = "";
+            }
+        });
+    </script>
 </body>
 </html>
