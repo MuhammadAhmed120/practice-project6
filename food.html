@@ -21,6 +21,7 @@
         .nav-con{
             position: fixed;
             top: 0;
+            z-index: 10;
             width: 100%;
         }
         
@@ -34,6 +35,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 150px;
         }
 
         .search-head{
@@ -83,37 +85,17 @@
             border-radius: 0 5px 5px 0;
         }
 
-        .heaD{
-            position: relative;
-            margin-top: 200px;
-        }
-
         .heading{
+            margin: 50px auto;
+            margin-top: 150px;
+            width: 80%;
+            background-color: #584624;
+            color: #cf9b58;
             text-align: center;
             text-transform: uppercase;
             font-size: 3em;
         }
         
-        .heading::before{
-            content: '';
-            position: absolute;
-            height: 5px;
-            width: 20%;
-            left: 20%;
-            top: 40%;
-            background: #c1c1c1;
-        }
-
-        .heading::after{
-            content: '';
-            position: absolute;
-            height: 5px;
-            width: 20%;
-            right: 20%;
-            top: 40%;
-            background: #c1c1c1;
-        }
-
         .card-con{
             width: 90%;
             margin: 0 auto;
@@ -143,7 +125,7 @@
         
         .details{
             border-top: 1px solid black;
-            width: 240px;
+            width: 295px;
             height: 140px;
             overflow: hidden;
             margin: 0 auto;
@@ -155,14 +137,19 @@
             margin-top: 5px;
             font-size: 2em;
             margin-bottom: 0px;
+            white-space: nowrap;
         }
         
         .det-con{
             margin-top: 0px;
             font-size: 1.2em;
+            height: 44px;
+            overflow: hidden;
         }
         
         .button{
+            position: absolute;
+            width: 290px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -197,7 +184,7 @@
                     </ul>
                 </div>
                 <div>
-                    <i class="fa fa-light fa-cart-shopping"><sub>0</sub></i>
+                    <a href="order.html"><i class="fa fa-light fa-cart-shopping"><sub class="cartNum"></sub></i></a>
                 </div>
             </div>
         </div>
@@ -209,32 +196,43 @@
                 <h1 class="search-h1"><span style="color: #cf9b58;">Flavorsome Feast</span> - Discover and Savor Your Favorites.</h1>
             </div>
             <div class="search-con">
-                <input type="search" name="" id="" class="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="" id="" class="search-bar" />
+                <i onclick="search()" class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
     </div>
 
 
+    <!-- <div class="Card"></div> -->
 
-
-    <div class="heaD">
-        <h1 class="heading">Spicy Deals</h1>
-    </div>
+    <div class="deal-head"></div>
     <div class="deals">
-        <div class="card-con spice-deal">
-        </div>
+        <div class="card-con spice-deal"></div>
+    </div>
+        
+    <div class="steak-head"></div>
+    <div class="deals">
+        <div class="card-con steak"></div>
     </div>
 
-    <div class="heaD">
-        <h1 class="heading">Spicy Pizza</h1>
-    </div>
+    <div class="pizza-head"></div>
     <div class="deals">
-        <div class="card-con pizza">
-        </div>
+        <div class="card-con pizza"></div>
+    </div>
+
+    <div class="pasta-head"></div>
+    <div class="deals">
+        <div class="card-con pasta"></div>
+    </div>
+
+    <div class="burger-head"></div>
+    <div class="deals">
+        <div class="card-con burger"></div>
     </div>
     
-    
+    <footer>
+        This website is made by Restaurant.
+    </footer>
  
     <script src="app.js"></script>
 </body>
