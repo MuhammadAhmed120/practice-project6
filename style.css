@@ -72,6 +72,15 @@ body{
 
 .fa-cart-shopping{
     color: #414141;
+    cursor: pointer;
+}
+
+.fa-cart-shopping:hover{
+    color: #5f5f5f;
+}
+
+.fa-cart-shopping:active{
+    opacity: 0.9;
 }
 
 /* HOME BELOW NAVBAR */
