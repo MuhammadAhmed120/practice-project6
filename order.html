@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order your food</title>
+    <link rel="shortcut icon" href="Images/home.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .order-con{
+            background-color: pink;
+        }
+        
+        .order-head{
+            display: flex;
+            justify-content: space-evenly;
+            background-color: cadetblue;
+        }
+        
+        .order-det{
+            display: flex;
+            justify-content: space-evenly;
+            background-color: burlywood;
+        }
+
+        .order-total{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: blueviolet;
+        }
+    </style>
+    
+    <div class="nav-con">
+        <div class="navbar">
+            <div class="name">Restaurant</div>
+            <div class="right-div">
+                <div>
+                    <ul class="list">
+                        <li><a href="index.html" id="home">Home</a></li>
+                        <li><a href="food.html" id="food">Food</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <i class="fa fa-light fa-cart-shopping"><sub class="cartNum"></sub></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-con">
+    </div>
+
+    <div style="display: flex;
+    justify-content: center;
+    color: red;">
+        <h1 style="cursor: pointer;" onclick="removeAll()">REMOVE ALL</h1>
+    </div>
+
+    <script src="order.js"></script>
+</body>
+</html>
